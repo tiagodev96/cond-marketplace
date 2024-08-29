@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="w-full">
       <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
         <Link
-          href="#"
+          href="/"
           className="flex items-center gap-2 font-bold text-xl"
           prefetch={false}
         >
