@@ -1,7 +1,6 @@
 "use client";
 
 import Filters from "@/components/filters";
-import Navbar from "@/components/navbar";
 import StoresGrid from "@/components/stores-grid";
 import { useMemo, useState } from "react";
 
@@ -109,7 +108,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <Filters
         onSelectCategory={handleSelectCategory}
         onSearch={handleSearch}
