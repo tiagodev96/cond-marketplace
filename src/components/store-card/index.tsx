@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import { Store } from "@/app/page";
 import { Clock } from "lucide-react";
+import Link from "next/link";
+import { Store } from "@/pages/homepage-screen";
 
 type StoreProps = {
   store: Store;
@@ -54,7 +55,10 @@ const StoreCategoryBadge = ({
 
 export default function StoreCard({ store }: StoreProps) {
   return (
-    <div className="bg-background rounded-lg overflow-hidden p-4 flex flex-col hover:shadow-md">
+    <Link
+      href={`/store/${store.id}`}
+      className="bg-background rounded-lg overflow-hidden p-4 flex flex-col hover:shadow-md"
+    >
       <StoreImage image={store.image} />
       <StoreDetails
         name={store.name}
@@ -62,6 +66,6 @@ export default function StoreCard({ store }: StoreProps) {
         hours={store.hours}
       />
       <StoreCategoryBadge category={store.category} />
-    </div>
+    </Link>
   );
 }

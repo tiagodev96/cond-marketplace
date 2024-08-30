@@ -1,9 +1,9 @@
 "use client";
 
-import { Store } from "@/app/page";
-import React, { useState } from "react";
+import { useState } from "react";
 import StoreCard from "../store-card";
-import GridPagination from "../grid-pagination";
+import DefaultPagination from "../default-pagination";
+import { Store } from "@/pages/homepage-screen";
 
 interface StoresGridProps {
   stores: Store[];
@@ -25,7 +25,7 @@ const StoresGrid = ({ stores }: StoresGridProps) => {
         ))}
       </div>
 
-      <GridPagination
+      <DefaultPagination
         totalPages={TOTAL_PAGES}
         currentPage={currentPage}
         onPageChange={handlePageChange}

@@ -1,13 +1,7 @@
-import React from "react";
+"use client";
 
-type StorePageParams = {
-  params: {
-    id: string;
-  };
-};
+import StoreScreen from "@/pages/store-screen";
 
-const StorePage = ({ params }: StorePageParams) => {
-  return <div>Page: {params.id}</div>;
-};
-
-export default StorePage;
+export default function StorePage() {
+  return <StoreScreen />;
+}
