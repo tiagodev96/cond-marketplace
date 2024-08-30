@@ -9,17 +9,17 @@ import {
   PaginationPrevious,
 } from "../ui/pagination";
 
-type GridPaginationProps = {
+type DefaultPaginationProps = {
   totalPages: number;
   currentPage: number;
   onPageChange: (page: number) => void;
 };
 
-const GridPagination = ({
+const DefaultPagination = ({
   totalPages,
   currentPage,
   onPageChange,
-}: GridPaginationProps) => {
+}: DefaultPaginationProps) => {
   const handlePrevious = () => {
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
@@ -109,4 +109,4 @@ const GridPagination = ({
   );
 };
 
-export default GridPagination;
+export default DefaultPagination;

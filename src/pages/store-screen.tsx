@@ -1,3 +1,4 @@
+import DefaultPagination from "@/components/default-pagination";
 import StoreDialog from "@/components/store-dialog";
 import StoreHeader from "@/components/store-header";
 import StoreTabs from "@/components/store-tabs";
@@ -7,6 +8,12 @@ const StoreScreen = () => {
   const [activeTab, setActiveTab] = useState("gallery");
   const [isZoomed, setIsZoomed] = useState(false);
   const [zoomedImageIndex, setZoomedImageIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const TOTAL_PAGES = 2;
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
 
   const sellerInfo = {
     name: "João Silva",
@@ -80,6 +87,12 @@ const StoreScreen = () => {
         catalogItems={catalogItems}
         galleryImages={galleryImages}
         handleImageClick={handleImageClick}
+      />
+
+      <DefaultPagination
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+        totalPages={TOTAL_PAGES}
       />
 
       <StoreDialog
