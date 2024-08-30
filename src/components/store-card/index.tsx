@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Badge } from "../ui/badge";
-import { Store } from "@/app/page";
 import { Clock } from "lucide-react";
 import Link from "next/link";
+import { Store } from "@/pages/homepage-screen";
 
 type StoreProps = {
   store: Store;
